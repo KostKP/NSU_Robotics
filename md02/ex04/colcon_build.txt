@@ -1,0 +1,9 @@
+WARNING: Package name "KostKP" does not follow the naming conventions. It should start with a lower case letter and only contain lower case letters, digits, underscores, and dashes.
+Starting >>> KostKP
+--- stderr: KostKP
+WARNING: Package name "KostKP" does not follow the naming conventions. It should start with a lower case letter and only contain lower case letters, digits, underscores, and dashes.
+---
+Finished <<< KostKP [2.70s]
+
+Summary: 1 package finished [2.85s]
+  1 package had stderr output: KostKP

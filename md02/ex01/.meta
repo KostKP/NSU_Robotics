@@ -1,0 +1,8 @@
+Откроем ~/.bashrc и добавим в конец:
+
+# Set ROS2 Humble
+source /opt/ros/jazzy/setup.bash
+source ~/ros2_ws/install/local_setup.bash
+
+После установки переменной окружения выполните команду:
+> printenv | grep ROS > ex01.txt

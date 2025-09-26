@@ -1,0 +1,13 @@
+Перед запуском команды создания пакета убедитесь, что вы находитесь в папке src:
+> cd ~/ros2_ws/src
+
+Синтаксис команды для создания нового пакета в ROS 2:
+> ros2 pkg create --build-type ament_cmake <package_name>
+
+После внесения правок и сохранения всех изменений соберите пакет:
+> colcon build --packages-select <package_name>
+
+========================================================
+> pip3 install -U colcon-ed --break-system-packages
+> colcon edit <package_name> <file_name>
+> colcon edit md02ex09_interfaces FullNameSumService.srv

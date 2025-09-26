@@ -1,0 +1,2 @@
+Build a package (from package directory):
+> colcon build

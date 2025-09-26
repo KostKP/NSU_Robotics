@@ -1,0 +1,5 @@
+Найдем путь к пакету:
+> ros2 pkg prefix ros2topic
+
+Список исполняемых файлов в action_tutorials_py:
+> ros2 pkg executables action_tutorials_py

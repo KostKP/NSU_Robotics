@@ -1,0 +1,20 @@
+Перед запуском команды создания пакета убедитесь, что вы находитесь в папке src:
+> cd ~/ros2_ws/src
+
+Синтаксис команды для создания нового пакета в ROS 2:
+> ros2 pkg create --build-type ament_python text_to_cmd_vel --dependencies rclpy geometry_msgs std_msgs
+
+После внесения правок и сохранения всех изменений соберите пакет:
+> colcon build --packages-select text_to_cmd_vel
+
+Без этой команды пакет не существует для ROS2 — только для текущей сессии:
+> . install/setup.bash
+
+Тестирование
+1. Запускаем turtlesim:
+> ros2 run turtlesim turtlesim_node
+2. Запускаем собранный узел:
+> ros2 run text_to_cmd_vel text_to_cmd_vel
+3. Отправляем команды:
+ros2 topic pub /cmd_text std_msgs/String "data: 'move_forward'"
+ros2 topic pub /cmd_text std_msgs/String "data: 'turn_left'"

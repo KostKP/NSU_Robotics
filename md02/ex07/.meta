@@ -1,0 +1,26 @@
+Команда ros2 run запускает исполняемый файл из пакета.
+> ros2 run <package_name> <executable_name>
+
+Чтобы запустить turtlesim, откройте новый терминал и введите следующую команду:
+> ros2 run turtlesim turtlesim_node
+
+Добавь 4 черепахи:
+> ros2 service call /spawn turtlesim/srv/Spawn "{x: 1, y: 1, theta: 0.0, name: 'Leonardo'}"
+> ros2 service call /spawn turtlesim/srv/Spawn "{x: 1, y: 2, theta: 0.0, name: 'Raphael'}"
+> ros2 service call /spawn turtlesim/srv/Spawn "{x: 1, y: 3, theta: 0.0, name: 'Donatello'}"
+> ros2 service call /spawn turtlesim/srv/Spawn "{x: 1, y: 4, theta: 0.0, name: 'Michelangelo'}"
+
+Чтобы увидеть параметры ваших узлов, откройте новый терминал и введите команду:
+> ros2 param list
+
+Чтобы изменить значение параметра во время выполнения, используйте команду:
+> ros2 param set <node_name> <parameter_name> <value>
+
+Установите для параметра /turtlesim/background_g значение 124.
+> ros2 param set /turtlesim background_g 124
+
+Выполнение команды ros2 service list в новом терминале вернет список всех служб, активных в данный момент в системе:
+> ros2 service list
+
+Просмотреть все текущие значения параметров узла можно с помощью команды:
+> ros2 param dump <node_name>

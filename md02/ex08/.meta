@@ -1,0 +1,11 @@
+Чтобы запустить созданный выше файл запуска, выполните следующую команду:
+> ros2 launch turtlesim_mimic_launch.yaml
+
+Чтобы увидеть систему в действии, откройте новый терминал и выполните команду ros2 topic pub в теме /turtlesim1/turtle1/cmd_vel, чтобы заставить первую черепаху двигаться:
+> ros2 topic pub -r 1 /turtlesim1/turtle1/cmd_vel geometry_msgs/msg/Twist "{linear: {x: 2.0, y: 0.0, z: 0.0}, angular: {x: 0.0, y: 0.0, z: -1.8}}"
+
+В новом терминале запустите ROS 2 и выполните:
+> ros2 run turtlesim turtle_teleop_key --ros-args --remap __ns:=/turtlesim1
+
+Запустите rqt_console в новом терминале с помощью следующей команды:
+> ros2 run rqt_console rqt_console

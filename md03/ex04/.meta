@@ -1,0 +1,17 @@
+Перед запуском команды создания пакета убедитесь, что вы находитесь в папке src:
+> cd ~/ros2_ws/src
+
+Синтаксис команды для создания нового пакета в ROS 2:
+> ros2 pkg create --build-type ament_cmake <package_name> --dependencies rclpy geometry_msgs turtlesim
+
+После внесения правок и сохранения всех изменений соберите пакет:
+> colcon build --packages-select <package_name>
+
+Без этой команды пакет не существует для ROS2 — только для текущей сессии:
+> . install/setup.bash
+
+Тестирование
+1. Запускаем turtlesim:
+> ros2 run turtlesim turtlesim_node
+2. Отправляем команды в другом терминале:
+> ros2 run move_to_goal move_to_goal 8 8 0

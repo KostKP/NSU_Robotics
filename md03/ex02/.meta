@@ -1,0 +1,16 @@
+Устанавливаем необходимые пакеты:
+> sudo apt install ros-jazzy-turtlesim ros-jazzy-ros2bag ros-jazzy-rosbag2-storage-mcap
+
+Запускаем turtlesim и turtle_teleop_key в отдельных терминалах
+> ros2 run turtlesim turtlesim_node
+> ros2 run turtlesim turtle_teleop_key
+
+Записываем turtle_cmd_vel.mcap, используем только стрелочки:
+> ros2 bag record -o turtle_cmd_vel.mcap /turtle1/cmd_vel --storage mcap
+
+Запускаем полученный turtle_cmd_vel.mcap:
+> ros2 topic echo /turtle1/pose > pose_speed_x1.yaml
+> ros2 bag play turtle_cmd_vel.mcap --storage mcap
+
+> ros2 topic echo /turtle1/pose > pose_speed_x2.yaml
+> ros2 bag play turtle_cmd_vel.mcap --rate 2.0 --storage mcap

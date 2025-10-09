@@ -1,0 +1,17 @@
+Перед запуском команды создания пакета убедитесь, что вы находитесь в папке src:
+> cd ~/ros2_ws/src
+
+Синтаксис команды для создания нового пакета в ROS 2:
+> ros2 pkg create --build-type ament_cmake <package_name> --dependencies rclcpp
+
+После внесения правок и сохранения всех изменений соберите пакет:
+> colcon build --packages-select <package_name>
+
+Без этой команды пакет не существует для ROS2 — только для текущей сессии:
+> . install/setup.bash
+
+Тестирование
+1. Запускаем service_name:
+> ros2 run service_full_name service_name
+2. Отправляем команды в другом терминале:
+> ros2 run service_full_name client_name Ivanov Ivan Ivanovich

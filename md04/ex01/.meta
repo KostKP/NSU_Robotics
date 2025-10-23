@@ -1,0 +1,14 @@
+Устанавливаем необходимые пакеты:
+> sudo apt install ros-jazzy-turtle-tf2-py ros-jazzy-tf2-tools
+
+Запускаем turtle_teleop_key в отдельном терминале
+> ros2 run turtlesim turtle_teleop_key
+
+Запускаем turtlesim_demo с tf2 в другом терминале:
+> ros2 launch turtle_tf2_py turtle_tf2_demo.launch.py
+
+Сохраним дерево фреймов в PDF в отдельном терминале:
+> ros2 run tf2_tools view_frames
+
+Запишем трансформации между turtle1 и turtle2:
+> ros2 run tf2_ros tf2_echo turtle1 turtle2

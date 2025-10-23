@@ -1,2 +1,5 @@
-Build a package (from package directory):
-> colcon build
+Перед запуском команды build убедитесь, что вы находитесь в папке src:
+> cd ~/ros2_ws/src
+
+После внесения правок и сохранения всех изменений соберите пакет:
+> colcon build --packages-select <package_name>

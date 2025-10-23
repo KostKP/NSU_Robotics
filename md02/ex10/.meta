@@ -16,5 +16,5 @@
 2. Запускаем собранный узел:
 > ros2 run text_to_cmd_vel text_to_cmd_vel
 3. Отправляем команды:
-ros2 topic pub /cmd_text std_msgs/String "data: 'move_forward'"
-ros2 topic pub /cmd_text std_msgs/String "data: 'turn_left'"
+> ros2 topic pub /cmd_text std_msgs/String "data: 'move_forward'"
+> ros2 topic pub /cmd_text std_msgs/String "data: 'turn_left'"

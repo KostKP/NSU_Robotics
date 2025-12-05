@@ -1,0 +1,17 @@
+Перед запуском команды создания пакета убедитесь, что вы находитесь в папке src:
+> cd ~/ros2_ws/src
+
+Синтаксис команды для создания нового пакета в ROS 2:
+> ros2 pkg create --build-type ament_python <package_name>
+
+После внесения правок и сохранения всех изменений соберите пакет:
+> colcon build --packages-select <package_name>
+
+Без этой команды пакет не существует для ROS2 — только для текущей сессии:
+> . install/setup.bash
+
+Запуск пакета:
+> ros2 launch md05ex05 random_movement.launch.py
+
+Проверка tf:
+> ros2 run tf2_tools view_frames
